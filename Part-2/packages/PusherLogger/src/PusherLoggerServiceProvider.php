@@ -4,6 +4,7 @@ namespace Neo\PusherLogger;
 
 use Pusher\Pusher;
 use Illuminate\Support\ServiceProvider;
+use Pusher\PushNotifications\PushNotifications;
 
 class PusherLoggerServiceProvider extends ServiceProvider
 {
@@ -33,7 +34,7 @@ class PusherLoggerServiceProvider extends ServiceProvider
             $pusher = new Pusher($key, $secret, $app_id, [
                 'useTLS' => true,
                 'encrypted' => true,
-                'cluster' => $config['options.cluster'] ?? '',
+                'cluster' => $config['options']['cluster'] ?? '',
             ]);
 
             $beams = new PushNotifications([

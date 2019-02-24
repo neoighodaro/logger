@@ -1,5 +1,5 @@
 {
-  "name": "neo/pusherlogger",
+  "name": "neo/pusher-logger",
   "description": "Something here",
   "type": "library",
   "license": "MIT",
@@ -17,6 +17,16 @@
   "autoload-dev": {
     "psr-4": {
       "Neo\\PusherLogger\\Tests\\": "tests"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Neo\\PusherLogger\\PusherLoggerServiceProvider"
+      ],
+      "aliases": {
+        "PusherLogger": "Neo\\PusherLogger\\PusherLogger"
+      }
     }
   }
 }

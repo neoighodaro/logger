@@ -6,13 +6,13 @@
                     Trigger Log Message
                 </h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
+                    <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
                 <div class="form-group">
                     <label for="exampleFormControlSelect1">Log Level</label>
-                    <select name="loglevel" class="form-control" id="loglevel">
+                    <select name="level" class="form-control" id="level">
                         <option value="info">Info</option>
                         <option value="warning">Warning</option>
                         <option value="error">Error</option>
@@ -20,7 +20,7 @@
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlTextarea1">Log Message</label>
-                    <textarea name="logmessage" class="form-control" id="logmessage" rows="2"></textarea>
+                    <textarea name="message" class="form-control" id="message" rows="2"></textarea>
                 </div>
             </div>
             <div class="modal-footer">
