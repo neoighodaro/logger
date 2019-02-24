@@ -149,7 +149,7 @@ class PusherLogger
         $this->pusher->trigger($this->channel, $this->event, $this->toPushHttp());
 
         if ($this->level === static::LEVEL_ERROR) {
-            $this->beams->publish($this->interest, $this->toPushBeam());
+            $this->beams->publish($this->interests, $this->toPushBeam());
         }
 
         return true;
