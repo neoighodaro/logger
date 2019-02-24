@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Android Logger Client</string>
+    <string name="channel_name">Log-Channel</string>
+    <string name="channel_description">To receive log updates</string>
+</resources>

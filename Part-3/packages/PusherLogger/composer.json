@@ -1,0 +1,32 @@
+{
+  "name": "neo/pusher-logger",
+  "description": "Something here",
+  "type": "library",
+  "license": "MIT",
+  "require": {
+    "php": ">=7.1.3",
+    "illuminate/support": "~5",
+    "pusher/pusher-php-server": "^3.2",
+    "pusher/pusher-push-notifications": "^1.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Neo\\PusherLogger\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Neo\\PusherLogger\\Tests\\": "tests"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Neo\\PusherLogger\\PusherLoggerServiceProvider"
+      ],
+      "aliases": {
+        "PusherLogger": "Neo\\PusherLogger\\PusherLogger"
+      }
+    }
+  }
+}

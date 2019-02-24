@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "308385626507",
+    "firebase_url": "https://logger-app-874d1.firebaseio.com",
+    "project_id": "logger-app-874d1",
+    "storage_bucket": "logger-app-874d1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:308385626507:android:579c84ac860b72c6",
+        "android_client_info": {
+          "package_name": "com.example.androidloggerclient"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "308385626507-467h9renppl67nvdqlv3ehqje7v07cf3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA43NHvDSPwQB40s0rZEpR4IP5ebJ_qUQA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
