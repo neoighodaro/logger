@@ -10,9 +10,9 @@ Clone the repository and open the various projects in the IDE. The repository co
 
 You need the following installed:
 
-* [VsCode] (https://code.visualstudio.com/)
-* [Xcode](https://developer.apple.com/xcode/)
-* (Android Studio)[https://developer.android.com/studio]
+- [VsCode](https://code.visualstudio.com/)
+- [Xcode](https://developer.apple.com/xcode/)
+- [Android Studio](https://developer.android.com/studio)
 
 ## Built With
 
