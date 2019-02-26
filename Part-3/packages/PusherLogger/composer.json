@@ -6,6 +6,7 @@
   "require": {
     "php": ">=7.1.3",
     "illuminate/support": "~5",
+    "monolog/monolog": "^1.24.0",
     "pusher/pusher-php-server": "^3.2",
     "pusher/pusher-push-notifications": "^1.0"
   },
