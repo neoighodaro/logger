@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EUF-Sx-OXS">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="zwX-mZ-k6K">
+            <objects>
+                <tableViewController id="EUF-Sx-OXS" customClass="ViewController" customModule="LoggerClient" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="YlH-nn-tLc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="logCell" id="3Wk-cY-I4K" customClass="TableCell" customModule="LoggerClient" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3Wk-cY-I4K" id="6Xj-re-Q6G">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sample log message" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aaZ-1w-1bj">
+                                            <rect key="frame" x="50" y="11.5" width="305" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R0e-SN-bep">
+                                            <rect key="frame" x="20" y="12" width="20" height="20"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="20" id="6u8-fn-G6a"/>
+                                                <constraint firstAttribute="width" constant="20" id="uQb-nB-I65"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="aaZ-1w-1bj" secondAttribute="trailing" constant="20" id="4ip-HS-CMV"/>
+                                        <constraint firstItem="aaZ-1w-1bj" firstAttribute="leading" secondItem="R0e-SN-bep" secondAttribute="trailing" constant="10" id="VDh-hg-Szn"/>
+                                        <constraint firstItem="R0e-SN-bep" firstAttribute="centerY" secondItem="6Xj-re-Q6G" secondAttribute="centerY" id="kG1-9k-x9L"/>
+                                        <constraint firstItem="R0e-SN-bep" firstAttribute="leading" secondItem="6Xj-re-Q6G" secondAttribute="leading" constant="20" id="uyS-7e-djz"/>
+                                        <constraint firstItem="aaZ-1w-1bj" firstAttribute="centerY" secondItem="6Xj-re-Q6G" secondAttribute="centerY" id="y2f-R2-Lp3"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="imageLogLevel" destination="R0e-SN-bep" id="ajF-u6-nYl"/>
+                                    <outlet property="labelLogMessage" destination="aaZ-1w-1bj" id="qE1-mS-DkE"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="EUF-Sx-OXS" id="Gf1-LR-Ve1"/>
+                            <outlet property="delegate" destination="EUF-Sx-OXS" id="1lY-Uc-NZ0"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5bo-kT-eNE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="324" y="-830.73463268365822"/>
+        </scene>
+    </scenes>
+</document>

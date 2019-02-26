@@ -58,6 +58,7 @@
             }
         </style>
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+        <meta name="csrf-token" content="{{ csrf_token() }}" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
     </head>
     <body>
