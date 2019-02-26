@@ -16,9 +16,7 @@ You need the following installed:
 
 ## Built With
 
-* [laravel] (https://laravel.com) - Used to build the logger dashboard and web client.
+* [Laravel] (https://laravel.com) - Used to build the logger dashboard and web client.
 * [Swift](https://developer.apple.com/swift/) - Used to build the iOS client
 * [Kotlin](http://kotlinlang.org) - Used to build the Android client.
 * [Pusher](https://pusher.com/) - APIs to enable devs building realtime features
-
-## Acknowledgments
