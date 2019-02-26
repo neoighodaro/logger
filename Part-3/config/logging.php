@@ -2,9 +2,9 @@
 
 use Monolog\Handler\StreamHandler;
 use Monolog\Handler\SyslogUdpHandler;
+use Neo\PusherLogger\PusherLoggerHandler;
 
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Default Log Channel
@@ -36,7 +36,7 @@ return [
     'channels' => [
         'stack' => [
             'driver' => 'stack',
-            'channels' => ['daily'],
+            'channels' => ['daily', 'pusher'],
             'ignore_exceptions' => false,
         ],
 
@@ -71,6 +71,12 @@ return [
             ],
         ],
 
+        'pusher' => [
+            'driver' => 'monolog',
+            'level' => 'debug',
+            'handler' => PusherLoggerHandler::class,
+        ],
+
         'stderr' => [
             'driver' => 'monolog',
             'handler' => StreamHandler::class,
@@ -90,5 +96,4 @@ return [
             'level' => 'debug',
         ],
     ],
-
 ];

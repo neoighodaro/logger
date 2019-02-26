@@ -10,7 +10,7 @@ class PusherLogger
     /**
      * @var \Pusher\Pusher
      */
-    public $pusher;
+    protected $pusher;
 
     /**
      * @var \Pusher\PushNotifications\PushNotifications
@@ -149,7 +149,7 @@ class PusherLogger
         $this->pusher->trigger($this->channel, $this->event, $this->toPushHttp());
 
         if ($this->level === static::LEVEL_ERROR) {
-            $this->beams->publishToInterests($this->interests, $this->toPushBeam());
+            $this->beams->publish($this->interests, $this->toPushBeam());
         }
 
         return true;
