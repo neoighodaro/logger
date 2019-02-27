@@ -39,24 +39,24 @@
                 Push Logger
             </div>
 
-<div id="logs" class="row justify-content-md-center">      
+<div id="logs" class="row justify-content-md-center">
     <pusher-logger> </pusher-logger>
-</div> 
-            
+</div>
+
         </div>
         <script src="js/app.js"></script>
 
 <script src="https://js.pusher.com/4.3/pusher.min.js"></script>
 <script>
-  var pusher = new Pusher('c20ac810e445d88d5d95', {
-    cluster: 'eu',
+  var pusher = new Pusher('PUSHER_APP_KEY', {
+    cluster: 'PUSHER_APP_CLUSTER',
     forceTLS: true
   });
-  
+
   // subscribe to the channel the log is broadcasted on
   var channel = pusher.subscribe('log-channel');
-  
-  // Subscribe to pushlogger event 
+
+  // Subscribe to pushlogger event
   channel.bind('log-event', function(log) {
     logs.push(log);
   });
@@ -87,21 +87,21 @@ checkLevel(loglevel) {
             return 'alert-default'
     }
   }
-        }, 
-        
+        },
+
 template: `
     <div class="col-lg-8">
       <div v-for="log in logs" class="alert" v-bind:class= "checkLevel(log.loglevel)"
        role="alert">
           @{{ log.message }}
-      </div>  
+      </div>
       <div v-show="logs.length == 0">
           No Logs Dispatched
-      </div>                              
+      </div>
     </div>
  `
     });
-    
+
     new Vue({
       el: "#logs"
     })
